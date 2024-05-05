@@ -4,13 +4,15 @@ const rideRequestSchema = new mongoose.Schema(
   {
     riderId: { type: String },
     username: { type: String },
-    //riderSource
-    //riderDestination
+    riderSource: { type: String },
+    riderDestination: { type: String },
     status: {
       type: String,
       enum: ["pending", "accepted", "declined"],
       default: "pending",
     },
+    phoneNumber: { type: String },
+    message: { type: String },
   },
   { _id: false }
 );
@@ -37,14 +39,16 @@ const rideSchema = new mongoose.Schema({
 
   date: Date,
   time: String,
-  route: {
+  ridePath: {
     type: {
       type: String,
       enum: ["LineString"],
+      default: "LineString"
     },
     coordinates: {
-      type: [[Number]],
-    },
+      type: [[Number]], // array of [lon, lat] pairs
+      default: []
+    }
   },
   sourceName: String,
   destinationName: String,
