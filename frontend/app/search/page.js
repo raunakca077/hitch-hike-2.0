@@ -60,8 +60,14 @@ const SearchComponent = () => {
     [25.458088766131926, 81.85187816003692], //CA Park
     [25.46158660125893, 81.84427073353051], //Police Line
     [25.4544052785852, 81.82523194476462], //Allahabad High Court
+    [25.447973754027352, 81.8127614673697], //SSB, Allahabad
+    [25.446761524396102, 81.82585061029825], //Prayagraj Junction
+    [25.449626148001222, 81.83879382823923], //Prayagraj Bus Stand
+    [25.45098058434759, 81.82614712705708], //All Saints Cathedral
+    [25.4544052785852, 81.82523194476462], //Allahabad High Court
     [25.45295982867542, 81.83494025578001], //Civil Lines
     [25.449623175857198, 81.85125369815248], //RamnathPur
+    [25.449626148001222, 81.83879382823923], //Prayagraj Bus Stand
   ];
 
   const locations = {
@@ -83,6 +89,10 @@ const SearchComponent = () => {
     "CA Park": { lat: 25.458088766131926, lon: 81.85187816003692 },
     "Allahabad High Court": { lat: 25.4544052785852, lon: 81.82523194476462 },
     "Civil Lines": { lat: 25.45295982867542, lon: 81.83494025578001 },
+    SSB: { lat: 25.447973754027352, lon: 81.8127614673697 },
+    "Prayagraj Junction": { lat: 25.446761524396102, lon: 81.82585061029825 },
+    "Prayagraj Bus Stand": { lat: 25.449626148001222, lon: 81.83879382823923 },
+    "All Saints Cathedral": { lat: 25.45098058434759, lon: 81.82614712705708 },
   };
 
   const fetchAvailableRides = async () => {
@@ -151,8 +161,8 @@ const SearchComponent = () => {
   return (
     <div className="bg-gray-100 pt-3 pb-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="overflow-y-scroll-hidden h-[700px] md:col-span-2 bg-white shadow-md rounded-lg p-6 transition-all duration-300 hover:ring-2 hover:ring-indigo-500">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="overflow-y-scroll h-[700px] md:col-span-1 bg-white shadow-md rounded-lg p-6 transition-all duration-300 hover:ring-2 hover:ring-indigo-500">
             <style jsx>{`
               /* Customize the scrollbar */
               ::-webkit-scrollbar {
@@ -224,8 +234,7 @@ const SearchComponent = () => {
                 {searchResults.map((ride, index) => (
                   <div
                     key={index}
-                    className="my-2 cursor-pointer bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-                    onClick={() => handleRideClick(ride)}
+                    className="my-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
                     <div className="p-4">
                       <p className="font-thin">
@@ -237,27 +246,35 @@ const SearchComponent = () => {
                       <p className="font-thin">
                         Driver Name: {ride.driverName}
                       </p>
-                      <p className="font-thin">Date: {ride.date}</p>
+                      <p className="font-thin">
+                        Date: {new Date(ride.date).toLocaleDateString("en-GB")}
+                      </p>
                       <p className="font-thin">Time: {ride.time}</p>
                       <p className="font-thin">Message: {ride.message}</p>
-                      <p className="font-thing">Distance: {ride.totalDist}</p>
+                      <p className="font-thin">
+                        Distance: {ride.totalDist.toFixed(2)} KM
+                      </p>
                     </div>
                     <button
-                      className="block mx-auto px-4 py-2 rounded-md bg-blue-500 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="inline-flex ml-5 mb-5 justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 hover:ring-2 hover:ring-indigo-500"
                       onClick={() => handleButtonClick()}
                     >
                       Request
                     </button>
                     {showRequestForm && (
-                      <RequestForm
-                        ride={ride}
-                        handleSubmit={handleSubmit}
-                        onClose={() => setShowRequestForm(false)}
-                      />
+                      <div className="bg-black">
+                        <RequestForm
+                          ride={ride}
+                          handleSubmit={handleSubmit}
+                          onClose={() => setShowRequestForm(false)}
+                        />
+                      </div>
                     )}
                   </div>
                 ))}
               </div>
+            ) : isSearchClicked ? (
+              <div className="mt-4 text-lg">No rides found</div>
             ) : null}
             {selectedRide && (
               <div className="mt-4">
