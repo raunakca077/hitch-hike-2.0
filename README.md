@@ -38,6 +38,10 @@
 - VS Code
 - Git and Github
 
+### Demo
+
+-[Presentation and Screenshot](file.pdf)
+
 <!-- Getting Started -->
 ## Getting Started
 
