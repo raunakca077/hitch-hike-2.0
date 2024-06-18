@@ -46,13 +46,28 @@
 
 ![Login](Asset/login.png)
 
+
 ![homepage](Asset/homepage.png)
+
+
 ![details](Asset/details.png)
+
+
 ![ride](Asset/search.png)
+
+
 ![create](Asset/create.png)
+
+
 ![cmap](Asset/cmap.png)
+
+
 ![share](Asset/share.png)
+
+
 ![list](Asset/RideList.png)
+
+
 <!-- Getting Started -->
 ## Getting Started
 
