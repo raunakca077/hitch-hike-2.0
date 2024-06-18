@@ -48,8 +48,10 @@
 ![homepage](Asset/homepage.png)
 ![details](Asset/details.png)
 ![ride](Asset/search.png)
-![Login](Asset/share.png)
-![Login](Asset/cmap.png)
+![create](Asset/create.png)
+![cmap](Asset/cmap.png)
+![share](Asset/share.png)
+![list](Asset/RideList.png)
 <!-- Getting Started -->
 ## Getting Started
 
