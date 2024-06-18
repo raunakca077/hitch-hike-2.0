@@ -47,9 +47,9 @@
 ![Login](Asset/login.png)
 ![homepage](Asset/homepage.png)
 ![details](Asset/details.png)
-![ride](Asset/ride search.png)
-![Login](Asset/login.png)
-![Login](Asset/login.png)
+![ride](Asset/search.png)
+![Login](Asset/share.png)
+![Login](Asset/cmap.png)
 <!-- Getting Started -->
 ## Getting Started
 
