@@ -44,8 +44,12 @@
 
 - Screenshots
 
-  ![Login](Asset/login.png)
-
+![Login](Asset/login.png)
+![homepage](Asset/homepage.png)
+![details](Asset/details.png)
+![ride](Asset/ride search.png)
+![Login](Asset/login.png)
+![Login](Asset/login.png)
 <!-- Getting Started -->
 ## Getting Started
 
