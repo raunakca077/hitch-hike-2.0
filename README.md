@@ -38,9 +38,9 @@
 - VS Code
 - Git and Github
 
-### Demo
+### App Showcase :
 
-[Presentation and Tests](hitch-hikePPT.pdf)
+[Presentation and Screenshots](hitch-hikePPT.pdf)
 
 <!-- Getting Started -->
 ## Getting Started
