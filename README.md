@@ -40,7 +40,7 @@
 
 ### Demo
 
--[Presentation and Screenshot](file.pdf)
+[Presentation and Tests](hitch-hikePPT.pdf)
 
 <!-- Getting Started -->
 ## Getting Started
