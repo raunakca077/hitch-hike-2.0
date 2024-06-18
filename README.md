@@ -40,7 +40,11 @@
 
 ### App Showcase :
 
-[Presentation and Screenshots](hitch-hikePPT.pdf)
+[Presentation](hitch-hikePPT.pdf)
+
+- Screenshots
+
+  ![Login](Asset/login.png)
 
 <!-- Getting Started -->
 ## Getting Started
