@@ -38,6 +38,8 @@
 - VS Code
 - Git and Github
 
+##Try --> ![live](https://hitch-hike-2-0-tkbl.vercel.app/)
+
 ### App Showcase :
 
 [Presentation](hitch-hikePPT.pdf)
