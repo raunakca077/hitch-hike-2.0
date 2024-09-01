@@ -38,7 +38,7 @@
 - VS Code
 - Git and Github
 
-##Try --> https://hitch-hike-2-0-tkbl.vercel.app/
+##Try --> https://hitchhike2.vercel.app/
 
 ### App Showcase :
 
